@@ -11,7 +11,7 @@ export default function OrderDetailPage({ orderId, onBack }: Props) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center text-gray-400 text-sm">
+      <div className="flex min-h-screen items-center justify-center bg-[#faf8f3] text-sm text-stone-400">
         Loading order...
       </div>
     );
@@ -19,13 +19,10 @@ export default function OrderDetailPage({ orderId, onBack }: Props) {
 
   if (isError || !order) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center bg-[#faf8f3]">
         <div className="text-center">
-          <p className="text-red-500 text-sm mb-3">Order not found.</p>
-          <button
-            onClick={onBack}
-            className="text-blue-600 hover:underline text-sm"
-          >
+          <p className="mb-3 text-sm text-red-500">Order not found.</p>
+          <button onClick={onBack} className="text-sm font-semibold text-orange-700 hover:underline">
             ← Back to Orders
           </button>
         </div>
@@ -34,16 +31,18 @@ export default function OrderDetailPage({ orderId, onBack }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Top Nav */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-xl font-bold text-gray-900">Spice Garden</h1>
-          <p className="text-xs text-gray-400">Order Management System</p>
+    <div className="min-h-screen bg-[#faf8f3] text-stone-950">
+      <div className="border-b border-stone-200 bg-[#fffcf7] px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-600 text-white">♨</div>
+          <div>
+            <h1 className="text-lg font-bold">Spice Gardens</h1>
+            
+          </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-6">
+      <div className="mx-auto max-w-7xl px-6 py-8">
         <OrderDetailPanel order={order} onBack={onBack} />
       </div>
     </div>
