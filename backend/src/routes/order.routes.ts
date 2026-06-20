@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
-import { createOrderSchema, addItemSchema, updateStatusSchema } from '../schemas/order.schema';
-import * as orderService from '../services/order.service';
-import { success } from '../utils/response';
-import { parsePagination } from '../utils/pagination';
-import { AppError } from '../utils/errors';
+import { createOrderSchema, addItemSchema, updateStatusSchema } from '../schemas/order.schema.js';
+import * as orderService from '../services/order.service.js';
+import { success } from '../utils/response.js';
+import { parsePagination } from '../utils/pagination.js';
+import { AppError } from '../utils/errors.js';
 
 const router = new Hono();
 const VALID_STATUSES = ['CONFIRMED', 'PREPARING', 'READY', 'COMPLETED', 'CANCELLED'];

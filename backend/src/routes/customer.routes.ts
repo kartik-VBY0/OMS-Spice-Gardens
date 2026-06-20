@@ -1,8 +1,8 @@
 import { Hono } from 'hono';
-import { createCustomerSchema, updateCustomerSchema } from '../schemas/customer.schema';
-import * as customerService from '../services/customer.service';
-import { success } from '../utils/response';
-import { parsePagination } from '../utils/pagination';
+import { createCustomerSchema, updateCustomerSchema } from '../schemas/customer.schema.js';
+import * as customerService from '../services/customer.service.js';
+import { success } from '../utils/response.js';
+import { parsePagination } from '../utils/pagination.js';
 
 const router = new Hono();
 

@@ -1,5 +1,5 @@
-import { Context } from 'hono';
-import { AppError } from '../utils/errors';
+import type { Context } from 'hono';
+import { AppError } from '../utils/errors.js';
 
 export function handleError(err: unknown, c: Context) {
   console.error('ERROR CAUGHT:', err); // remove this after everything works

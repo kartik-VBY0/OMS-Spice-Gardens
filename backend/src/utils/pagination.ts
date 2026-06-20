@@ -1,4 +1,4 @@
-import { AppError } from './errors';
+import { AppError } from './errors.js';
 
 export function parsePagination(query: { page?: string; size?: string }) {
   const page = query.page ? parseInt(query.page, 10) : 1;

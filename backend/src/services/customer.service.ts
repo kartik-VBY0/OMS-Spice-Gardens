@@ -1,5 +1,5 @@
-import { pool } from '../db/pool';
-import { AppError } from '../utils/errors';
+import { pool } from '../db/pool.js';
+import { AppError } from '../utils/errors.js';
 
 
 export async function listCustomers(search: string | undefined, page: number, size: number, offset: number) {

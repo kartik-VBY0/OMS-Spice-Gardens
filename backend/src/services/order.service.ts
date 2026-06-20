@@ -1,6 +1,6 @@
-import { pool } from '../db/pool';
-import { AppError } from '../utils/errors';
-import { generateOrderNumber } from '../utils/orderNumber';
+import { pool } from '../db/pool.js';
+import { AppError } from '../utils/errors.js';
+import { generateOrderNumber } from '../utils/orderNumber.js';
 
 const ALLOWED_TRANSITIONS: Record<string, string[]> = {
   CONFIRMED: ['PREPARING', 'CANCELLED'],

@@ -1,9 +1,9 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import 'dotenv/config';
-import { handleError } from './middleware/errorHandler';
-import customerRoutes from './routes/customer.routes';
-import orderRoutes from './routes/order.routes';
+import { handleError } from './middleware/errorHandler.js';
+import customerRoutes from './routes/customer.routes.js';
+import orderRoutes from './routes/order.routes.js';
 import { cors } from 'hono/cors';
 
 
