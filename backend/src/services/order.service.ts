@@ -135,9 +135,10 @@ export async function updateOrderStatus(orderId: string, newStatus: string) {
   if (current.rows.length === 0) throw new AppError('RESOURCE_NOT_FOUND', 'Order not found', 404);
 
   const currentStatus = current.rows[0].status;
-  if (!ALLOWED_TRANSITIONS[currentStatus].includes(newStatus)) {
-    throw new AppError('INVALID_STATUS_TRANSITION', `Cannot move from ${currentStatus} to ${newStatus}`, 409);
-  }
+ const allowed = ALLOWED_TRANSITIONS[currentStatus] ?? [];
+if (!allowed.includes(newStatus)) {
+  throw new AppError('INVALID_STATUS_TRANSITION', `Cannot move from ${currentStatus} to ${newStatus}`, 409);
+}
 
   await pool.query('UPDATE orders SET status = $1, updated_at = now() WHERE id = $2', [newStatus, orderId]);
   return getFullOrder(orderId);
