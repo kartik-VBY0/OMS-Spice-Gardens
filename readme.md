@@ -4,6 +4,14 @@ A full-stack internal order management system for Spice Garden restaurant. Built
 
 ---
 
+## Live Demo
+
+**Frontend:** [https://oms-spice-gardens-1.onrender.com](https://oms-spice-gardens-1.onrender.com)
+
+> **Note:** The backend is hosted on Render's free tier and may take 30–60 seconds to wake up on the first request. If orders don't load immediately, wait a moment and refresh.
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |

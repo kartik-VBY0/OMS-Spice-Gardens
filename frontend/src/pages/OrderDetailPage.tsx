@@ -34,11 +34,16 @@ export default function OrderDetailPage({ orderId, onBack }: Props) {
     <div className="min-h-screen bg-[#faf8f3] text-stone-950">
       <div className="border-b border-stone-200 bg-[#fffcf7] px-6 py-4">
         <div className="mx-auto flex max-w-7xl items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-orange-600 text-white">♨</div>
-          <div>
-            <h1 className="text-lg font-bold">Spice Gardens</h1>
-            
-          </div>
+          <div className="flex items-center gap-3">
+  <img
+    src="/image.png"
+    alt="Spice Garden"
+    className="h-10 w-10 rounded-2xl object-cover"
+  />
+  <div>
+    <h1 className="text-lg font-bold">Spice Gardens</h1>
+  </div>
+</div>
         </div>
       </div>
 
