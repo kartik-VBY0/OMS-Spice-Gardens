@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const createOrderSchema = z.object({
   customer: z.object({
-    id: z.string().uuid().nullable().optional(),
+    id: z.string().nullable().optional(),
     name: z.string().min(1),
     email: z.string().email().nullable().optional(),
     phone: z.string().min(1),
